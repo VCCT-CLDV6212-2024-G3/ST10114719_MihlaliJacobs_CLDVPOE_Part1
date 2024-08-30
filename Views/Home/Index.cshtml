@@ -1,0 +1,71 @@
+﻿@model CLDVPOEP1.Models.CustomerProfile
+
+<!-- Main background container -->
+<div class="background">
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header section -->
+        <div class="form">
+            <h1 style="font-size: 50px;">ABC Retailers</h1>
+            <h2 style="font-size: 30px;"><u>Order Processing System</u></h2>
+            <br>
+            <br />
+        </div>
+    </div>
+
+   
+    <div class="container">
+        <!-- Form to add customer profile -->
+        <div>
+            <form asp-action="AddCustomerProfile" class="form" method="post">
+                <b><span class="title">Customer Profile</span></b>
+                <input type="text" name="FirstName" placeholder="First Name" class="input" />
+                <input type="text" name="LastName" placeholder="Last Name" class="input" />
+                <input type="email" name="Email" placeholder="Email" class="input" />
+                <input type="text" name="PhoneNumber" placeholder="Phone Number" class="input" />
+                <button type="submit" class="submit">Add Profile</button>
+                <br />
+                <br />
+                <br />
+                <br />
+            </form>
+        </div>
+
+        <!-- Form to upload a contract -->
+        <div>
+            <form asp-action="UploadContract" class="form" method="post" enctype="multipart/form-data">
+                <b><span class="title">Upload Contracts</span></b>
+                <br />
+                <label for="upload" class="label">Upload Contract Here:</label>
+                <input class="input" type="file" name="file" />
+                <button type="submit" class="submit">Upload Contract</button>
+            </form>
+        </div>
+
+        <!-- Form to upload an image -->
+        <div>
+            <form asp-action="UploadImage" class="form" method="post" enctype="multipart/form-data">
+                <b><span class="title">Upload <br />Image</span></b>
+                <br />
+                <label for="upload" class="label">Upload Image Here:</label>
+                <input type="file" name="file" class="input" />
+                <button type="submit" class="submit">Upload Image</button>
+            </form>
+        </div>
+
+        <!-- Form to process an order -->
+        <div>
+            <form asp-action="ProcessOrder" class="form" method="post">
+                <b><span class="title">Processing Order</span></b>
+                <br />
+                <label for="upload" class="label">Order ID:</label>
+                <input class="input" type="text" name="orderId" placeholder="Order ID" />
+                <button type="submit" class="submit">Process Order</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
