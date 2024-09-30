@@ -1,4 +1,4 @@
-namespace SemesterTwo.Models
+namespace CLDVPOEP1.Models
 {
     public class ErrorViewModel
     {
